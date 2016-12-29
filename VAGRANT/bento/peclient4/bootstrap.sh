@@ -11,10 +11,17 @@ cat >> /etc/hosts << EOF
 192.168.0.3 robows.localdomain robows #90 b1 1c 7a a7 c7
 EOF
 
+#Remove NetworkManager 
+yum -y remove NetworkManager
 
-# Register with puppet 
-curl -k https://robows-puppet.localdomain:8140/packages/current/install.bash | bash
+#Install bind-8tils
+yum -y install bind-utils  
 
 # Update OS
 yum -y update
 
+# Register with puppet 
+curl -k https://robows-puppet.localdomain:8140/packages/current/install.bash | bash
+
+#Reboot 
+/sbin/shutdown -r now 
