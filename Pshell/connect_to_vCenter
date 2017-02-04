@@ -1,0 +1,13 @@
+#
+if(-not  (Get-PSSnapin VMware.VimAutomation.Core))
+{
+    Add-PSSnapin VMware.VimAutomation.Core
+}
+
+Connect-VIServer vcdev.devcorp.heb.com -user $h364650_domainuser -Password $h364650_domainpassword
+
+#Get list of hosts
+GET-VMHost
+
+#Get list aind put it into CSV
+Get-VMHost | Export-Csv c:\temp\VMHosts.csv
