@@ -11,12 +11,12 @@ Vagrant.configure("2") do |config|
   # https://docs.vagrantup.com.
    
   # Set hostname 
-  config.vm.hostname="peclient$i.localdomain"
+  config.vm.hostname="peclient9.localdomain"
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "bento/centos-7.2"
-  config.vm.box_version = "2.3.1"
+  config.vm.box = "centOS7_patched"
+  config.vm.box_version = "0"
 
 
   # Disable automatic box update checking. If you disable this, then
@@ -62,7 +62,7 @@ Vagrant.configure("2") do |config|
   
   # Set VirtualBox name
     config.vm.provider "virtualbox" do |vb|
-    vb.name = "peclient$i.localdomain"
+    vb.name = "peclient9.localdomain"
     vb.memory = "512" 
    end
 
