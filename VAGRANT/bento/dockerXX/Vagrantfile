@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
   # https://docs.vagrantup.com.
    
   # Set hostname 
-  config.vm.hostname="docker02.localdomain"
+  config.vm.hostname="dockerXX.localdomain"
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
